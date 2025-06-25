@@ -10,5 +10,5 @@ environment {
            sh 'mvm clean deploy'
         }
       }
-    )
+    }
 }
