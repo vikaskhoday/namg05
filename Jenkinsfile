@@ -22,7 +22,7 @@ pipeline {
 
         stage("SonarQube analysis") {
             environment {
-                scannerHome = tool 'namg-snar-scanner'
+                scannerHome = tool 'namg-sonar-scanner'
             }
             steps {
                 withSonarQubeEnv('namg-sonarqube-server') {
