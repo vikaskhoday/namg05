@@ -1,3 +1,4 @@
+
 pipeline {
   2     agent {label 'maven'}
   3 
@@ -33,12 +34,11 @@ pipeline {
  32         steps {
  33             script {
  34                 timeout(time:1,unit: 'HOURS') {
- 35                     def qg = waitForQualityGate()
- 36                     if (qg.status != 'OK') {
- 37                         error " Piepline aborted due to quality gate failure: ${qg.status}"
+ 35                    def qg = waitForQualityGate()
+ 36                    if (qg.status != 'OK') {
+ 37                       error " Piepline aborted due to quality gate failure: ${qg.status}"
  38                     }
- 39                   
- 40                 }
+ 39                 }
  42             }
  43         }
  44     }
