@@ -37,9 +37,8 @@ pipeline {
  36                     if (qg.status != 'OK') {
  37                         error " Piepline aborted due to quality gate failure: ${qg.status}"
  38                     }
- 39                   }
- 40 
- 41                 }
+ 39                   
+ 40                 }
  42             }
  43         }
  44     }
